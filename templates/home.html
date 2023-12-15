@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/home1.css' %}?v=1" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <img
+            src="{%static 'images/Menu.png'%}"
+            width="30px"
+            style="filter: invert(100%)"
+          />
+        </label>
+        <label class="logo"
+          ><h1 id="logotxt">THINGS<span>4</span>YOU</h1></label
+        >
+        <ul>
+          <li><a href="" class="active">Home</a></li>
+          <li><a href="" class="not_active">About us</a></li>
+          <li><a href="" class="not_active">Shop</a></li>
+          <li><a href="" class="not_active">Login</a></li>
+          <li>
+            <a id="signin" href=""
+              ><i class="fa fa-phone" style="margin-right: 5px"></i>Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="cyc1-div">
+      <div class="cyc1-shop">
+        <span style="display: flex">
+          <h2>&#x20b9;</h2>
+          <h2 class="cyc1-rate-strike">9860</h2>
+          <br />
+          <h2>&#x20b9;</h2>
+          <h2 class="cyc1-rate">6999</h2></span
+        >
+        <span
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <a href="">SHOP NOW</a></span
+        >
+      </div>
+      <div class="cyc1-h1">
+        <h1 class="cyc1-h1-1">RIDE</h1>
+        <h1 class="cyc1-h1-2">INTO THE WILD</h1>
+      </div>
+
+      <div class="cyc1-shawdow"></div>
+      <img src="{%static 'images/cyc1.png'%}" class="cyc1-img" alt="" />
+      <img src="{%static 'images/rock.png'%}" class="cyc1-rock" />
+      <img src="{%static 'images/grass.png'%}" class="cyc1-grass" />
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-12"
+        style="display: flex; align-items: center; justify-content: right"
+      >
+        <form action="" method="post">
+          {%csrf_token%}
+          <div class="search-div">
+            <input
+              type="text"
+              name="search"
+              id="search-bar"
+              placeholder="Search"
+            />
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-12"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        "
+      >
+        {%for i in products%}
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{{i.image.url}}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{i.name}}</h5>
+            <h5 class="card-title1">&#x20b9;{{i.price}}</h5>
+            <p class="card-text">{{i.category}}</p>
+            <span
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              ><a href="#" class="btn btn-primary">Buy Now</a></span
+            >
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+    </div>
+  </body>
+</html>
