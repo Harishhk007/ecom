@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/home1.css' %}?v=1" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <img
+            src="{%static 'images/Menu.png'%}"
+            width="30px"
+            style="filter: invert(100%)"
+          />
+        </label>
+        <label class="logo"
+          ><h1 id="logotxt">VUE<span>CYCLE</span></h1></label
+        >
+        <ul>
+          <li><a href="{%url 'home'%}" class="not_active">Home</a></li>
+          <li><a href="{%url 'aboutus'%}" class="not_active">About us</a></li>
+          {%if user.is_authenticated%}
+          <li><a href="{%url 'logout'%}" class="not_active">Logout</a></li>
+          {%else%}
+          <li><a href="{%url 'login'%}" class="active">Login</a></li>
+          {%endif%}
+          <a href="{%url 'cart'%}"
+            ><button class="active_button">
+              <i class="fa fa-cart-plus" style="margin-right: 5px"></i>Cart
+            </button></a
+          >
+
+          <a href=""
+            ><button class="not_active_button">
+              <i class="fa fa-phone" style="margin-right: 5px"></i>Contact
+            </button></a
+          >
+        </ul>
+      </nav>
+    </div>
+    <h1 id="about-txt">SHOPING <span>CART</span></h1>
+    <h3 id="cart-summary-viewpro">View Your Products...</h3>
+    <form action="{% url 'buynow' %}" method="post">
+      {%csrf_token%}
+    {% for i in cart_items %}
+    
+    <div
+      class="row"
+      id="cart-div"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      "
+    >
+      <div class="col-lg-4">
+        <img src="{{i.item.image.url}}" width="300px" height="300px" />
+      </div>
+      <div class="col-lg-8">
+        <h1 class="cart-h">{{i.item.name}}</h1>
+        <h2 class="cart-h">{{i.item.category}}</h2>
+        {% if i.is_sale %}
+        <span
+          style="display: flex; align-items: center; justify-content: start"
+        >
+          <strike><h2 class="cart-h">&#x20b9;{{i.item.price}}</h2></strike>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h2 class="cart-h">&#x20b9;{{i.item.sale_price}}</h2></span
+        >
+        {%else%}
+        <h2 class="cart-h">&#x20b9;{{i.item.price}}</h2>
+        {%endif%}
+        
+        </h2>
+        </h2>
+        <span style="display: flex; align-items: center; justify-content: left"
+          ><a href="{%url 'product' i.item.id%}" class="cart-view-btn"
+            >View Product <i class="fa fa-external-link"></i
+          ></a>
+          
+            <a href="{% url 'remove_from_cart' i.item.id %}"  class="cart-remove-btn">
+            
+              Remove Product <i class="fa fa-close"></i>
+           </a></span>
+            
+              <h2 class="cart-h">
+                Quantity :
+                <input type="number" min="1" name="qtycart_{{ i.item.id }}" id="qtycart_{{ i.item.id }}" />
+      </div>
+    </div>
+    {%endfor%}
+    <div style="display: flex; align-items: center; justify-content: center">
+      
+      <a href="{%url 'buynow'%}"
+        ><button class="buynow-cart">Proceed To Buy</button></a
+      >
+    </div></form>
+  </body>
+</html>

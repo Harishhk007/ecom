@@ -14,19 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+
+from django.urls import path
+from django.urls import path
+
+from cart import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('cart/', include('cart.urls')),
-    path('', include('myapp.urls')),
-    
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+   
+   path('add/',views.cart_add,name="cart_add"),
+   path('delete/',views.cart_delete,name="cart_delete"),
+   path('update/',views.cart_update,name="cart_update"),
 
-# Add a separate URL pattern for serving media files during development
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
 

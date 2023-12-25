@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?v=1" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <img
+            src="{%static 'images/Menu.png'%}"
+            width="30px"
+            style="filter: invert(100%)"
+          />
+        </label>
+        <label class="logo"
+          ><h1 id="logotxt">VUE<span>CYCLE</span></h1></label
+        >
+        <ul>
+          <li><a href="" class="active">Home</a></li>
+          <li><a href="" class="not_active">About us</a></li>
+          {%if user.is_authenticated%}
+          <li><a href="" class="not_active">Logout</a></li>
+          {%else%}
+          <li><a href="" class="active">Login</a></li>
+          {%endif%}
+          <a href=""
+            ><button class="not_active_button">
+              <i class="fa fa-cart-plus" style="margin-right: 5px"></i>Cart
+            </button></a
+          >
+
+          <a href=""
+            ><button class="not_active_button">
+              <i class="fa fa-phone" style="margin-right: 5px"></i>Contact
+            </button></a
+          >
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+
+<h1 id="about-txt">REGISTER <span>USER</span></h1>
+
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+ <span style="display: flex;align-items: center;justify-content: center;">   <button type="submit" class="sub-btn">Register</button></span>
+</form>
+  </body></html>

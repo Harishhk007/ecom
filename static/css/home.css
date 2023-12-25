@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&family=Black+Ops+One&family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Ephesis&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gabarito:wght@400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Shizuru&family=Space+Grotesk:wght@300;400;500;600;700&family=Teko:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&family=Black+Ops+One&family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Ephesis&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gabarito:wght@400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik+Doodle+Triangles&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Shizuru&family=Space+Grotesk:wght@300;400;500;600;700&family=Teko:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 
@@ -53,7 +53,7 @@ margin: 0 5px;
   text-decoration: none;
 }
 #logotxt{
-  font-family: 'Bebas Neue';
+  font-family: 'Rubik Doodle Triangles';
   color: black;
   
   margin-top: 10px;
@@ -61,7 +61,7 @@ margin: 0 5px;
   font-size: 4em;
 }
 #logotxt span{
-  font-family: 'Bebas Neue';
+  font-family: 'Rubik Doodle Triangles';
   color: #1640D6;
 }
 #signin:hover{
@@ -72,7 +72,7 @@ nav ul li a{
   color:black;
   font-family: 'Ubuntu';
   font-size: 20px;
-  margin: 0 15px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,40 @@ nav ul li a{
   font-weight: 700;
   text-decoration: none;
 }
+.not_active_button{
+  color: black;
+  background-color: white;
+  font-family: 'Ubuntu';
+  padding: 2px 10px;
+  margin: 0 10px;
+transition: 0.5s;
+  font-weight: 700;
+ border: 2px solid black;
+  font-size: 20px;
+  border-radius: 15px;
+
+  text-decoration: none;
+}
+.not_active_button:hover{
+  border: 2px solid #1640D6;
+ 
+  color: white;
+  background-color: #1640D6;
+ }
+ .active_button{
+  border: 2px solid #1640D6;
+  font-family: 'Ubuntu';
+  padding: 2px 10px;
+  font-size: 20px;
+  border-radius: 15px;
+
+  text-decoration: none;
+  margin: 0 10px;
+transition: 0.5s;
+  font-weight: 700;
+  color: white;
+  background-color: #1640D6;
+ }
 a.active, a:hover{
   transition: .5s;
   text-decoration: none;
@@ -106,7 +140,7 @@ nav ul{
   float: right;
   margin-top: 15px;
 }
-#signin{
+.not_active_button{
   font-size: 20px;
 }
  
@@ -140,7 +174,7 @@ nav ul{
   transition: all .5s;
   text-align: left;
  }
- #signin{
+ .not_active_button{
   color: black;
   background-color: transparent;
   font-family: 'Ubuntu';
@@ -151,7 +185,19 @@ nav ul{
   border: 3px solid black;
   text-decoration: none;
  }
- #signin:hover{
+ .active_button{
+  color: #1640D6;
+  background-color: white;
+  font-family: 'Ubuntu';
+  padding: 5px 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 3px solid white;
+  text-decoration: none;
+ }
+ .not_active_button:hover{
   color: #1640D6;
   background-color: white;
   font-family: 'Ubuntu';
@@ -265,13 +311,14 @@ border-radius: 20px;
 #loginusername{
   margin: auto;
   font-family: 'poppins';
-  color: white;
-  text-shadow: 0px 0px 5px black;
+  color: black;
+
   text-align: center;
   width: 400px;
+  background-color: white;
   font-weight: 500;
   border: 3px solid white;
-  background-color: transparent;
+
   font-size: 20px;
   box-shadow: 0px 0px 7px black;
   outline: 0;
@@ -280,15 +327,16 @@ border-radius: 20px;
 #loginpassword{
   margin: auto;
   font-family: 'poppins';
-  color: white;
+  color: black;
+  background-color: white;
   box-shadow: 0px 0px 7px black;
-  text-shadow: 0px 0px 5px black;
+
   outline: 0;
   text-align: center;
   width: 400px;
   font-weight: 500;
   border: 3px solid white;
-  background-color: transparent;
+
   font-size: 20px;
   border-radius: 20px;
 }
@@ -306,12 +354,12 @@ border-radius: 20px;
 }
 ::placeholder{
   font-family: 'poppins';
-  color:white;
-  text-shadow: 0px 0px 5px black;
+  
 }
 .login-bg{
   background-image: url(/static/images/logbg.jpg);
   background-position: center;
+
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -438,6 +486,7 @@ border-radius: 20px;
 .card-img-top{
   width: 210px;
   height: 200px;
+  object-fit: fill;
   border-radius: 20px;
   background-color: white;
 }
@@ -445,6 +494,7 @@ border-radius: 20px;
 
 .card{
   width: 25em;
+  flex-shrink: 0;
   padding: 20px;
   height: 37em;
   border-radius: 15px;
@@ -509,4 +559,291 @@ text-align: center;
 
   border: 0;
   font-weight: 600;
+}
+.sale{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-family: 'poppins';
+  font-size: 15px;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background-color: orangered;
+  font-weight: 500;
+}
+#about-txt{
+
+    font-family: 'Bebas Neue';
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 5em;
+  }
+  #about-txt span{
+    font-family: 'Bebas Neue';
+    color: #1640D6;
+  }
+
+  #about-h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    text-align: justify;
+    margin: 20px 50px;
+  }
+.sub-btn{
+  background-color: #1640D6;
+  color: white;
+  font-family: 'poppins';
+  font-weight: 500;
+  transition: 1s;
+  margin-top: 30px;
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.sub-btn:hover{
+  color: #1640D6;
+  background-color: white;
+
+  
+}
+.product-name{
+  font-family: 'poppins';
+  color: black;
+  font-weight: 600;
+  text-align: left;
+  margin: 20px 0px;
+}
+.product-cat{
+  font-family: 'poppins';
+  color: black;
+  margin: 20px 0px;
+  font-weight: 600;
+  text-align: left;
+}
+.product-cart{
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin-right: 20px;
+  transition: 1s;
+  background-color: #1640D6;
+  padding: 2px 15px;
+  border: 2px solid #1640D6;
+  border-radius: 10px;
+}
+.product-buy{
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 1s;
+  background-color: #1640D6;
+  padding: 2px 15px;
+  border: 2px solid #1640D6;
+  border-radius: 10px;
+}
+
+.product-buy i{
+  margin-right: 5px;
+}
+.product-buy:hover{
+  background-color: white;
+  border: 2px solid #1640D6;
+  color: #1640D6;
+}
+.product-cart i{
+  margin-right: 5px;
+}
+.product-cart:hover{
+  background-color: white;
+  border: 2px solid #1640D6;
+  color: #1640D6;
+}
+.product-desc-head{
+  font-family: 'poppins';
+  font-weight: 600;
+  color: black;
+}
+.Similar-pro-head{
+  font-family: 'poppins';
+  font-weight: 600;
+  color: black;
+  margin: 10px;
+}
+#horizontal-scrollable-div-1 {
+width: 100%;
+   overflow-x: auto; /* Always show scrollbar for horizontal scrolling */
+ }
+ 
+ /* Hide horizontal scrollbar when there is no overflow */
+ #horizontal-scrollable-div-1::-webkit-scrollbar {
+   height: 0;
+ }
+ 
+ #horizontal-scrollable-div-1 {
+   -ms-overflow-style: none; /* IE and Edge */
+   scrollbar-width: none; /* Firefox */
+ }
+ 
+ /* Show horizontal scrollbar on hover */
+ #horizontal-scrollable-div-1:hover::-webkit-scrollbar {
+   height: 12px;
+ }
+ 
+ #horizontal-scrollable-div-1:hover {
+   scrollbar-width: thin;
+   scrollbar-color: transparent; /* Scrollbar Track and Handle colors */
+ }
+ #cart-summary-viewpro{
+  font-family: 'dancing script';
+font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+ }
+ .cart-h{
+  font-family: 'poppins';
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+  margin: 15px 0px;
+ }
+ #cart-div{
+  border: 3px solid #1640D6;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 7px #1640D6;
+ }
+ .cart-view-btn{
+
+  background-color: #1640D6;
+  font-family: 'poppins';
+  font-size: 15px;
+  margin: 10px;
+  font-weight: 600;
+  padding: 4px 15px;
+  border: 2px solid #1640D6;
+  border-radius: 20px;
+  color: white;
+
+ }
+ .cart-remove-btn{
+  
+  background-color: #f04e36;
+  font-family: 'poppins';
+  font-size: 15px;
+  margin: 10px;
+  font-weight: 600;
+  padding: 4px 15px;
+  border: 2px solid #f04e36;
+  border-radius: 20px;
+  color: white;
+ }
+ .cart-remove-btn:hover{
+  color: #f04e36;
+  background-color: white;
+ }
+.buynow-cart{
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: #1640D6;
+  padding: 3px 15px;
+  margin: 50px 0;
+  border-radius: 20px;
+  transition: 1s;
+  border: 2px solid #1640D6;
+}
+.buynow-cart:hover{
+  background-color: white;
+  color: #1640D6;
+}
+.buy-now-buy:hover{
+  background-color: white;
+  color: #1640D6;
+}
+.buy-now-buy{
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: #1640D6;
+  padding: 3px 15px;
+  margin: 50px 0;
+  border-radius: 20px;
+  transition: 1s;
+  border: 2px solid #1640D6;
+}
+.table-1{
+  width: 100%;
+  padding: 40px;
+  border: 3px solid black;
+}
+.table-1 th{
+  font-size: 15px;
+  font-weight: 600;
+  
+  color: #000;
+  font-family: 'poppins';
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px;
+}
+.table-1 tr{
+  padding: 10px;
+}
+.table-1 td{
+  font-size: 10px;
+  font-weight: 500;
+  
+  color: #000;
+  font-family: 'poppins';
+
+  border: 2px solid black;
+  padding: 10px;
+}
+.quantity-selector label{
+  font-size: 20px;
+  font-family: 'poppins';
+  color: #000;
+}
+.quantity-selector input{
+  font-size: 15px;
+  font-family: 'poppins';
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+}
+#qtycart{
+  font-size: 15px;
+  font-family: 'poppins';
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+}
+.buynow-form label{
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.buynow-form input{
+  font-family: 'poppins';
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #000;
+  border: 3px solid black;
+}
+.buynow-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

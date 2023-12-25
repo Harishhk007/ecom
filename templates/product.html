@@ -9,14 +9,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -63,71 +68,83 @@
         </ul>
       </nav>
     </div>
-  </div>
-  {% for message in messages %}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>{{ message }}</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endfor %}
 
-    <div class="cyc1-div">
-      <div class="cyc1-shop">
-        <span style="display: flex">
-          <h2>&#x20b9;</h2>
-          <h2 class="cyc1-rate-strike">9860</h2>
-          <br />
-          <h2>&#x20b9;</h2>
-          <h2 class="cyc1-rate">6999</h2></span
-        >
+    <div
+      class="row"
+      style="display: flex; align-items: center; justify-content: center"
+    >
+      <div class="col-md-4">
+        <img src="{{product.image.url}}" width="100%" />
+      </div>
+      <div class="col-md-8">
+        <h1 class="product-name">{{product.name}}</h1>
+        <h2 class="product-cat">{{product.category}}</h2>
+        {% if product.is_sale %}
         <span
-          style="display: flex; align-items: center; justify-content: center"
+          style="display: flex; align-items: center; justify-content: start"
         >
-          <a href="{%url 'product' 61%}">SHOP NOW</a></span
+          <strike
+            ><h2 class="product-cat">&#x20b9;{{product.price}}</h2></strike
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h2 class="product-cat">&#x20b9;{{product.sale_price}}</h2></span
         >
-      </div>
-      <div class="cyc1-h1">
-        <h1 class="cyc1-h1-1">RIDE</h1>
-        <h1 class="cyc1-h1-2">INTO THE WILD</h1>
-      </div>
+        {%else%}
+        <h2 class="product-cat">&#x20b9;{{product.price}}</h2>
+        {%endif%}
+        <form action="{% url 'buynow1' product.id %}" method="POST">
+          {% csrf_token %}
+          <div class="quantity-selector">
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              value="1"
+              min="1"
+            />
+          </div>
+          <span
+            style="display: flex; align-items: center; justify-content: start"
+          >
+            <button class="product-buy" href="">
+              <i class="fa fa-shopping-bag"></i>BUY
+            </button> </form>
 
-      <div class="cyc1-shawdow"></div>
-      <img src="{%static 'images/cyc1.png'%}" class="cyc1-img" alt="" />
-      <img src="{%static 'images/rock.png'%}" class="cyc1-rock" />
-      <img src="{%static 'images/grass.png'%}" class="cyc1-grass" />
+           <a href="{% url 'add_to_cart' product.id %}" class="product-cart"
+           value="{{product.id}}"
+           id="add-cart"
+           type="submit">
+              
+            
+              <i class="fa fa-cart-plus"></i>CART
+           </a>
+          </span>
+       
+      </div>
     </div>
     <div class="row">
-      <div
-        class="col-lg-12"
-        style="display: flex; align-items: center; justify-content: right"
-      >
-        <form action="{%url 'search'%}" method="post">
-          {%csrf_token%}
-          <div class="search-div">
-            <input
-              type="text"
-              name="search"
-              id="search-bar"
-              placeholder="Search"
-            />
-            <button class="search-btn"><i class="fa fa-search"></i></button>
-          </div>
-        </form>
+      <div class="col-md-12">
+        <h1 class="product-desc-head">PRODUCT DESCRIPTION :</h1>
+        <h2 class="" style="white-space: wrap">
+          {{product.description|linebreaksbr}}
+        </h2>
       </div>
     </div>
+    <h1 class="Similar-pro-head">SIMILAR PRODUCTS :</h1>
+
     <div class="row">
       <div
         class="col-lg-12"
         style="
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          flex-wrap: wrap;
+          justify-content: start;
+          flex-shrink: 0;
         "
+        id="horizontal-scrollable-div-1"
       >
-        {%for i in products%} {% if i.is_sale %}
+        {%for i in similar%} {% if i.is_sale %}
         <div class="card">
           <p class="sale">SALE!!!</p>
           <img
@@ -154,7 +171,9 @@
           <p class="card-text">{{i.category}}</p>
           <span
             style="display: flex; align-items: center; justify-content: center"
-            ><a href="{%url 'product' i.id%}" class="btn btn-primary">Buy Now</a></span
+            ><a href="{%url 'product' i.id%}" class="btn btn-primary"
+              >Buy Now</a
+            ></span
           >
         </div>
         {%else%}
@@ -172,7 +191,9 @@
           <p class="card-text">{{i.category}}</p>
           <span
             style="display: flex; align-items: center; justify-content: center"
-            ><a href="{%url 'product' i.id%}" class="btn btn-primary">Buy Now</a></span
+            ><a href="{%url 'product' i.id%}" class="btn btn-primary"
+              >Buy Now</a
+            ></span
           >
         </div>
         {%endif%} {%endfor%}

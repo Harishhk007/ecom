@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?v=1" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <img
+            src="{%static 'images/Menu.png'%}"
+            width="30px"
+            style="filter: invert(100%)"
+          />
+        </label>
+        <label class="logo"
+          ><h1 id="logotxt">VUE<span>CYCLE</span></h1></label
+        >
+        <ul>
+          <li><a href="{%url 'home'%}" class="not_active">Home</a></li>
+          <li><a href="{%url 'aboutus'%}" class="active">About us</a></li>
+          {%if user.is_authenticated%}
+          <li><a href="{%url 'logout'%}" class="not_active">Logout</a></li>
+          {%else%}
+          <li><a href="{%url 'login'%}" class="not_active">Login</a></li>
+          {%endif%}
+          <a href="{%url 'cart'%}"
+            ><button class="not_active_button">
+              <i class="fa fa-cart-plus" style="margin-right: 5px"></i>Cart
+            </button></a
+          >
+
+          <a href=""
+            ><button class="not_active_button">
+              <i class="fa fa-phone" style="margin-right: 5px"></i>Contact
+            </button></a
+          >
+        </ul>
+      </nav>
+    </div>
+    <h1 id="about-txt">ABOUT <span>US</span></h1>
+    <h2 id="about-h2" style="text-align: center">
+      Welcome to VueCycle - Your Premier Destination for Quality Cycling Gear!
+    </h2>
+    <h2 id="about-h2">
+      At VueCycle, we're passionate about cycling and committed to providing
+      enthusiasts, beginners, and professionals alike with top-quality bicycles
+      and cycling accessories. Our mission is to make cycling more accessible,
+      enjoyable, and fulfilling for everyone, whether you're a commuter, a
+      fitness enthusiast, or an adventure seeker.
+    </h2>
+    <h2 id="about-h2">
+      As avid cyclists ourselves, we understand the thrill of the ride and the
+      importance of having reliable, high-performance gear. That's why we've
+      curated a collection of cutting-edge VueCycle brand bicycles known for
+      their precision engineering, durability, and exceptional performance on
+      various terrains.
+    </h2>
+
+    <h2 id="about-h2">
+      What sets VueCycle apart is our dedication to quality craftsmanship and
+      innovation. Each VueCycle bike is meticulously designed and rigorously
+      tested to ensure it meets the highest standards of safety, comfort, and
+      efficiency. Whether you're looking for a sleek road bike, a sturdy
+      mountain bike, or a versatile hybrid, VueCycle has something to suit your
+      riding style and preferences.
+    </h2>
+
+    <h2 id="about-h2">
+      But VueCycle isn't just about selling bikes - it's about fostering a
+      community of passionate cyclists. We're here to support you at every stage
+      of your cycling journey. Our team consists of experienced riders and
+      experts who are more than happy to provide guidance, recommendations, and
+      helpful tips to enhance your cycling experience.
+    </h2>
+
+    <h2 id="about-h2">
+      At VueCycle, customer satisfaction is at the core of what we do. We strive
+      to provide a seamless shopping experience, from browsing our user-friendly
+      website to receiving your carefully packaged order at your doorstep. With
+      secure payment options and swift delivery, we aim to make your purchase
+      hassle-free and convenient.
+    </h2>
+
+    <h2 id="about-h2">
+      Join the VueCycle family today and embark on a cycling adventure like no
+      other. Explore our range of top-notch bicycles and accessories, and get
+      ready to elevate your riding experience.
+    </h2>
+    <h2 id="about-h2">
+      Thank you for choosing VueCycle - Where Quality Meets Performance on Every
+      Ride!
+    </h2>
+
+    <h2 id="about-h2">Happy Cycling,</h2>
+
+    <h2 id="about-h2">
+      The
+      <span id="about-txt" style="font-size: 20px; text-align: left; margin: 0"
+        >Vue<span>Cycle</span></span
+      >
+      Team
+    </h2>
+  </body>
+</html>

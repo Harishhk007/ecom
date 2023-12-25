@@ -23,7 +23,20 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.login,name="login"),
-    path('home/',views.home,name="home")
+   
+    
+    path('',views.home,name="home"),
+    path('aboutus/',views.about,name="aboutus"),
+    path('login/',views.login1,name="login"),
+    path('search/',views.search_page,name="search"),
+    path('logout/',views.logout1,name="logout"),
+    path('register/',views.register,name="register"),
+    path('product/<int:pk>',views.product,name="product"),
+    path('add_to_cart/<int:item_id>/', views.add_to_cart, name='add_to_cart'),
+    path('cart/',views.cart_summary,name="cart"),
+    path('remove_from_cart/<int:cart_item_id>/', views.remove_from_cart, name='remove_from_cart'),
+    path('buycart/',views.buynow,name="buynow"),
+    path('order/',views.order,name="order"),
+    path('buynow/<int:p_id>/',views.buynow1,name="buynow1"),
+
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

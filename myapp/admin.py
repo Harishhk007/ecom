@@ -3,9 +3,13 @@ from .models import Customer
 from .models import Category
 from .models import Product
 from .models import Order
+from .models import Cart
+from .models import CartItem
 
 # Register your models here.
 admin.site.register(Customer)
 admin.site.register(Category)
 admin.site.register(Product)
 admin.site.register(Order)
+admin.site.register(Cart)
+admin.site.register(CartItem)
