@@ -82,26 +82,9 @@
           </tr>
         </table>
       </div>
-    </div><form action="{% url 'order'%}" method="post">
-      {% csrf_token %}
-    <h3 id="cart-summary-viewpro" style="text-align: left; margin: 20px">
-      Order Information...
-    </h3>
-    <table class="buynow-form">
-      <tr>
-      <th>
-      <label for="address">ADDRESS</label></th>
-   <td> <input type="text" name="address" id="address"></td></tr>
-    <tr>
-      <th>
-    <label for="phone">PHONE</label></th><td>
-    <input type="number" name="phone" id="phone"></td></tr></table>
- 
+    </div>
     <div style="display: flex; align-items: center; justify-content: center">
-      
-        
-        <button type="submit" class="buy-now-buy">Proceed to Purchase</button>
-      </form>
+      <button type="submit" class="buy-now-buy">Proceed to Purchase</button>
     </div>
   </body>
 </html>

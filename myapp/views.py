@@ -201,13 +201,13 @@ def order(request):
             # Create Order instances from the cart items
             if request.user.is_authenticated:
                 user_instance = User.objects.get(pk=request.user.pk)
-                customer_instance = user_instance.first_name  # Access the related Customer instance
+                customer_instance = user_instance.first_name
                 
                 cart_items = CartItem.objects.filter(cart__user=request.user)
                 for cart_item in cart_items:
                     Order.objects.create(
                         product=cart_item.item,
-                        customer=customer_instance,  # Assign the related Customer instance
+                        customer=customer_instance,
                         quantity=cart_item.quantity,
                         address=address,
                         phone=phone,
